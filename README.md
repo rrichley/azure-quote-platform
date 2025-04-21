@@ -1,6 +1,6 @@
 # Azure Quote & Application Platform
 
-A scalable, event-driven, serverless architecture built on Microsoft Azure — designed to simulate a real-world quote and application system, similar to platforms used by financial firms like Evelyn Partners.
+A scalable, event-driven, serverless architecture built on Microsoft Azure — designed to simulate a real-world quote and application system, similar to platforms used by financial firms.
 
 ---
 
