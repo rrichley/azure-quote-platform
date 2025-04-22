@@ -78,6 +78,60 @@ Alerts and thresholds can be configured for error spikes, queue backlogs, or per
 
 ---
 
+## 🔗 API Architecture Styles
+
+| Style        | Use Case                                                      |
+|--------------|---------------------------------------------------------------|
+| REST         | Exposed via API Management for public-facing endpoints        |
+| Event-Driven | Internal communication between microservices (Service Bus)    |
+| Webhooks     | Optional for notifications or external integrations           |
+| GraphQL      | Future optional — for flexible data querying (e.g., dashboards)|
+
+All APIs are versioned (e.g. `/v1/quotes`) and can be documented using OpenAPI (Swagger) via API Management.
+
+---
+
+## 🛡️ Security Approach
+
+Security is implemented across all layers:
+
+- **Entra ID (Azure AD)** for authentication and role-based access
+- **Managed Identities** used by Function Apps and Terraform deployments
+- **Azure Key Vault** stores all secrets, keys, and connection strings
+- **HTTPS enforced** across APIs via API Management and Front Door
+- **Principle of Least Privilege** applied across resources and permissions
+
+---
+
+## 📦 Deployment Strategy
+
+The platform is deployed using a multi-stage CI/CD pipeline via GitHub Actions. Deployment environments include:
+
+- `dev`: Feature testing, local development  
+- `test`: Integration and staging validation  
+- `prod`: Production release with gated approvals
+
+Terraform is used for infrastructure provisioning in each environment.
+
+---
+
+## 📐 Architectural Principles
+
+This solution was designed using modern, cloud-native architecture principles:
+
+- **Keep it simple** — allow the architecture to evolve
+- **Fit-for-purpose** — solve key requirements over perfection
+- **Right tool for the job** — use Azure-native services where appropriate
+- **Loosely coupled** — divide and conquer via microservices
+- **Prepare for failure** — design with fault tolerance in mind
+- **Secure by design** — use defense-in-depth and RBAC
+- **Cost-aware** — balance performance with business value
+- **Feedback loops** — monitor, log, and improve continuously
+- **Design for HA** — use redundant components and auto-recovery
+- **Think serverless** — flexible, scalable, low-overhead deployment
+
+---
+
 ## Folder Structure
 
 ```
