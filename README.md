@@ -62,7 +62,7 @@ Each service is a separate Azure Function for modularity and independence:
 
 ---
 
-## 📈 Monitoring & Observability
+## Monitoring & Observability
 
 This solution includes full-stack observability and diagnostics across key services:
 
@@ -78,7 +78,7 @@ Alerts and thresholds can be configured for error spikes, queue backlogs, or per
 
 ---
 
-## 🔗 API Architecture Styles
+## API Architecture Styles
 
 | Style        | Use Case                                                      |
 |--------------|---------------------------------------------------------------|
@@ -91,7 +91,7 @@ All APIs are versioned (e.g. `/v1/quotes`) and can be documented using OpenAPI (
 
 ---
 
-## 🛡️ Security Approach
+## Security Approach
 
 Security is implemented across all layers:
 
@@ -103,7 +103,7 @@ Security is implemented across all layers:
 
 ---
 
-## 📦 Deployment Strategy
+## Deployment Strategy
 
 The platform is deployed using a multi-stage CI/CD pipeline via GitHub Actions. Deployment environments include:
 
@@ -115,7 +115,7 @@ Terraform is used for infrastructure provisioning in each environment.
 
 ---
 
-## 📐 Architectural Principles
+## Architectural Principles
 
 This solution was designed using modern, cloud-native architecture principles:
 
