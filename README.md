@@ -62,6 +62,22 @@ Each service is a separate Azure Function for modularity and independence:
 
 ---
 
+## 📈 Monitoring & Observability
+
+This solution includes full-stack observability and diagnostics across key services:
+
+| Component           | Monitoring Tool        | Observability Features                                 |
+|---------------------|------------------------|---------------------------------------------------------|
+| Azure Function Apps | Application Insights   | Logs, failures, live metrics, custom traces             |
+| Azure Service Bus   | Azure Monitor          | Queue length, DLQ monitoring, message flow diagnostics  |
+| Cosmos DB           | Azure Monitor          | Request units (RU) consumption, availability metrics    |
+| API Management      | Built-in Analytics     | Request count, success rate, latency, usage patterns    |
+| CI/CD Pipeline      | GitHub Actions Logs    | Workflow execution logs and deployment feedback         |
+
+Alerts and thresholds can be configured for error spikes, queue backlogs, or performance drops. This ensures proactive error tracking and continuous improvement.
+
+---
+
 ## Folder Structure
 
 ```
@@ -113,6 +129,7 @@ azure-quote-platform/
 - Demonstrate a fully serverless architecture.
 - Modular design using microservices.
 - Secure, scalable, and cost-optimized.
+- Enable full-stack observability using Azure-native tools.
 - Real-world use case aligned with financial sector needs.
 - Built to evolve into an AKS-based solution if needed.
 
