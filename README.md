@@ -1,3 +1,4 @@
+
 # Azure Quote & Application Platform
 
 A scalable, event-driven, serverless architecture built on Microsoft Azure — designed to simulate a real-world quote and application system, similar to platforms used by financial firms.
@@ -29,10 +30,11 @@ This project demonstrates how to architect, deploy, and manage a modular financi
 |-------------------------|----------------------------------------------------------------------|
 | Azure API Management    | Exposes public-facing secure API endpoints                           |
 | Azure Function Apps     | Each Function = one microservice (quote, validation, app, notify)    |
-| Azure Storage Queues    | Used for communication between services (event-driven)               |
+| Azure Service Bus       | Secure, reliable messaging between microservices (event-driven)      |
 | Azure Cosmos DB         | Durable, scalable data storage for quotes and applications           |
 | Azure Front Door        | Optional: Add later for global load balancing & security             |
 | Azure Key Vault         | Securely store API keys, DB strings, secrets                         |
+| Azure Entra ID (AAD)    | Secure identity and access control (RBAC, Managed Identity)          |
 | GitHub Actions          | CI/CD pipeline for Terraform deployment                              |
 | Terraform               | Infrastructure-as-Code for repeatable, scalable provisioning         |
 
@@ -54,8 +56,9 @@ Each service is a separate Azure Function for modularity and independence:
 - **Language:** Python
 - **Infrastructure:** Terraform
 - **CI/CD:** GitHub Actions
+- **Messaging:** Azure Service Bus
 - **Architecture Style:** Event-driven, Serverless-first, loosely coupled
-- **Security:** Entra ID, HTTPS, Key Vault, least privilege
+- **Security:** Entra ID (AAD), HTTPS, Key Vault, least privilege
 
 ---
 
