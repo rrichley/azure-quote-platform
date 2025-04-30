@@ -1,1 +1,10 @@
+# Terraform local state
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
 
+# Ignore sensitive or bulky files
+infra/.terraform/
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
