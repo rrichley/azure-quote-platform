@@ -11,3 +11,4 @@ infra/terraform.tfstate.backup
 
 # Azure Function App local settings
 local.settings.json
+functions/**/local.settings.json
